@@ -1,53 +1,50 @@
-# Strapi Starter Next Blog
+# Strapi Starter React Blog
 
-Next starter for creating a blog with Strapi.
+> **Warning :warning:**
+>
+> This starter is deprecated and relies on the deprecated **[strapi/strapi-legacy-blog](https://github.com/strapi/strapi-legacy-blog)** repository.
+>
+> Instead, we recommend that you use our other React blog starters with better SEO support:
+>
+> * [**strapi-starter-gatsby-blog**](https://github.com/strapi/strapi-starter-gatsby-blog)
+> * [**strapi-starter-next-blog**](https://github.com/strapi/strapi-starter-next-blog)
+
+React starter for creating a blog with Strapi.
+
+This starter allows you to try Strapi with React with the example of a simple blog. It is fully customizable and due to the fact that it is open source, fully open to contributions. Do not hesitate to add new features etc ...
+
+You may want to know how to develop such a starter by your own! This starter is actually the result of this [tutorial](https://strapi.io/blog/build-a-blog-with-react-strapi-and-apollo)
 
 ![screenshot image](/screenshot.png)
-
-This starter allows you to try Strapi with Next with the example of a simple blog. It is fully customizable and due to the fact that it is open source, fully open to contributions. So do not hesitate to add new features and report bugs!
 
 ## Features
 
 - 2 Content types: Article, Category
 - 2 Created articles
 - 3 Created categories
+- Permissions set to `true` for article and category
 - Responsive design using UIkit
 
 Pages:
 
-- "/" to display every articles
-- "/article/:id" to display one article
+- "/" display every articles
+- "/article/:id" display one article
 - "/category/:id" display articles depending on the category
 
 ## Getting started
 
-The easiest way to try this starter is to run it locally on your computer.
-
-First, you'll need to create your own copy of this starter. You can do so by clicking [the "Use this template" button](https://github.com/strapi/strapi-starter-next-blog/generate) on GitHub, and filling the [form](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
-
 ### Backend
 
-Create a Strapi project named `backend` using the [blog template](https://github.com/strapi/strapi-template-blog):
-
-```
-# Using Yarn
-yarn create strapi-app backend --template https://github.com/strapi/strapi-template-blog
-
-# Or using NPM
-npx create-strapi-app backend --template https://github.com/strapi/strapi-template-blog
-```
-
-The Strapi server will automatically start and import sample seed data.
+See full instructions [here](https://github.com/strapi/strapi-legacy-blog)
 
 ### Frontend
 
-Leave the Strapi backend running in the background. Open another terminal tab, and make sure you're in the `frontend` directory:
-
 ```bash
-cd frontend
+git clone https://github.com/strapi/strapi-starter-react-blog.git
+cd strapi-starter-react-blog
 ```
 
-Install dependencies and start the Next.js server:
+Then start the frontend server:
 
 ```bash
 # Using yarn
@@ -57,14 +54,11 @@ yarn develop
 # Using npm
 npm install
 npm run develop
+
+# Create a .env file containing the API_URL variable
+echo 'SKIP_PREFLIGHT_CHECK=true\nREACT_APP_BACKEND_URL="http://localhost:1337' >> .env
 ```
 
-If you want to change the default environment variables, create a `.env.local` file like this:
-
-```
-cp .env.local.example .env.local
-```
-
-Next server is running here => [http://localhost:3000](http://localhost:3000)
+React server is running here => [http://localhost:3000](http://localhost:3000)
 
 Enjoy this starter!
